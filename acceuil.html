@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groupe Anonymat - Votre Partenaire Fiscal et Communication</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <style>
+        .hero-slideshow {
+            animation: slideshow 30s infinite;
+            background-size: cover;
+            background-position: center;
+        }
+
+        @keyframes slideshow {
+            0% {
+                background-image: url('./assets/hero/about_2-min.jpg');
+            }
+
+            20% {
+                background-image: url('./assets/hero/Image_fx.jpg');
+            }
+
+            40% {
+                background-image: url('./assets/hero/Image_fx\ \(1\).jpg');
+            }
+
+            60% {
+                background-image: url('./assets/hero/PLATEFORME\ DE\ VENTE.jpg');
+            }
+
+            80% {
+                background-image: url('./assets/hero/freepik__a-diverse-group-of-six-professionals-stand-in-a-br__22645.jpeg');
+            }
+
+            100% {
+                background-image: url('./assets/hero/stylish-black-couple-have-business-conversation.jpg');
+            }
+        }
+
+        /* Styles pour le menu mobile */
+        .mobile-menu-enter-active,
+        .mobile-menu-leave-active {
+            transition: transform 0.3s ease;
+        }
+
+        /* splide css */
+        .splide__pagination__page {
+            background: #cbd5e1;
+            border: none;
+            width: 10px;
+            height: 10px;
+            margin: 0 4px;
+        }
+
+        .splide__pagination__page.is-active {
+            background: #3b82f6;
+            transform: scale(1.2);
+        }
+
+        .splide__arrow {
+            background: transparent;
+        }
+
+        .splide__arrow svg {
+            fill: #6b7280;
+        }
+
+        .splide__arrow:hover svg {
+            fill: #3b82f6;
+        }
+
+        .splide__slide {
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+        }
+
+        .splide__slide.is-active {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body class="bg-[#f7f9fa]">
+
+    <!-- Hero Section avec Carousel -->
+    <section class="w-full h-screen relative hero-slideshow">
+        <div class="absolute inset-0 bg-black bg-opacity-60 z-0"></div>
+
+        <!-- Navbar Originale -->
+        <nav class="bg-transparent w-full h-20 flex items-center justify-center">
+            <div class="w-10/12 h-14 flex justify-between items-center gap-5">
+                <div class="w-1/6 h-full flex justify-between items-center relative">
+                    <img src="./assets/logo/gan-removebg-preview-4.webp" alt="Groupe Anonymat" class="h-10">
+                </div>
+
+                <div class="hidden xl:flex w-2/3 text-center h-full flex justify-start items-center gap-5 relative">
+                    <ul class="flex items-center justify-end text-white text-[16px] gap-7 w-full">
+                        <li><a href="index.html" class="hover:text-blue-400 transition-colors">Accueil</a></li>
+                        <li><a href="services.html" class="hover:text-blue-400 transition-colors">Services</a></li>
+                        <li><a href="solutions.html" class="hover:text-blue-400 transition-colors">Solutions</a></li>
+                        <li><a href="realisations.html" class="hover:text-blue-400 transition-colors">Réalisations</a>
+                        </li>
+                        <li><a href="blog.html" class="hover:text-blue-400 transition-colors">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="hidden xl:flex w-1/6 h-full flex justify-end items-center gap-5 relative">
+                    <button
+                        class="py-2 px-5 rounded-3xl bg-[#00bdff] text-white hover:bg-blue-700 transition duration-300">
+                        <i class="fas fa-sign-in-alt mr-2 text-white"></i>
+                        Nous contacter
+                    </button>
+                </div>
+
+                <div class="xl:hidden flex w-auto text-end h-full flex justify-end items-center gap-5 relative">
+                    <button id="mobile-menu-button" class="py-2 px-3 rounded-xl border-2 border-white text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Menu Mobile -->
+        <div id="mobile-menu" class="xl:hidden fixed inset-0 z-50 hidden">
+            <!-- Overlay -->
+            <div class="absolute inset-0 bg-black bg-opacity-50" id="mobile-menu-overlay"></div>
+
+            <!-- Menu Content -->
+            <div
+                class="absolute right-0 top-0 h-full w-80 bg-[#0d121f] border-l border-white/10 mobile-menu-overlay transform transition-transform duration-300 overflow-y-auto">
+                <!-- Header -->
+                <div class="p-6 border-b border-white/10">
+                    <div class="flex justify-between items-center">
+                        <img src="./assets/logo/gan-removebg-preview-4.webp" alt="Groupe Anonymat" class="h-8">
+                        <button id="mobile-close-button" class="text-white p-2">
+                            <i class="fas fa-times text-xl"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Navigation -->
+                <div class="p-6 space-y-2">
+                    <a href="index.html"
+                        class="block py-4 text-white hover:text-[#00bdff] font-medium border-b border-white/10 transition-colors">
+                        Accueil
+                    </a>
+
+                    <!-- Services Accordion -->
+                    <div class="border-b border-white/10">
+                        <button id="mobile-services-button"
+                            class="flex justify-between items-center w-full py-4 text-white hover:text-[#00bdff] font-medium transition-colors">
+                            <span>Services</span>
+                            <i class="fas fa-chevron-down text-sm transition-transform" id="mobile-services-arrow"></i>
+                        </button>
+                        <div id="mobile-services-menu" class="hidden pl-4 pb-2 space-y-2">
+                            <a href="/service-collecte-taxes"
+                                class="block py-2 text-gray-300 hover:text-[#00bdff] transition-colors">
+                                Collecte de Taxes
+                            </a>
+                            <a href="/service-conseil-fiscal"
+                                class="block py-2 text-gray-300 hover:text-[#00bdff] transition-colors">
+                                Conseil Fiscal
+                            </a>
+                            <a href="/service-evenements"
+                                class="block py-2 text-gray-300 hover:text-[#00bdff] transition-colors">
+                                Événements
+                            </a>
+                            <a href="/service-communication"
+                                class="block py-2 text-gray-300 hover:text-[#00bdff] transition-colors">
+                                Communication
+                            </a>
+                        </div>
+                    </div>
+
+                    <a href="solutions.html"
+                        class="block py-4 text-white hover:text-[#00bdff] font-medium border-b border-white/10 transition-colors">
+                        Solutions
+                    </a>
+                    <a href="realisations.html"
+                        class="block py-4 text-white hover:text-[#00bdff] font-medium border-b border-white/10 transition-colors">
+                        Réalisations
+                    </a>
+                    <a href="blog.html"
+                        class="block py-4 text-white hover:text-[#00bdff] font-medium border-b border-white/10 transition-colors">
+                        Blog
+                    </a>
+                    <a href="contact.html"
+                        class="block py-4 text-white hover:text-[#00bdff] font-medium border-b border-white/10 transition-colors">
+                        Contact
+                    </a>
+
+                    <!-- CTA Buttons -->
+                    <div class="pt-6 space-y-3">
+                        <a href="/devis"
+                            class="block w-full bg-[#00bdff] text-white text-center py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                            <i class="fas fa-file-invoice-dollar mr-2"></i>Demander un devis
+                        </a>
+                        <a href="/contact"
+                            class="block w-full border border-white text-white text-center py-3 rounded-lg font-semibold hover:bg-white hover:text-[#0d121f] transition-colors">
+                            <i class="fas fa-phone mr-2"></i>Nous contacter
+                        </a>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="pt-6 flex justify-center space-x-4">
+                        <a href="#" class="text-white hover:text-[#00bdff] transition-colors">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-[#00bdff] transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-[#00bdff] transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Contenu Hero -->
+        <section class="w-full h-3/4 flex items-center justify-center relative z-10 ">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col items-center text-center">
+
+                    <!-- Titre Principal Simplifié -->
+                    <div class="mb-8">
+                        <h2
+                            class="text-4xl lg:max-w-6xl font-bold leading-tight sm:leading-tight md:text-6xl md:leading-tight text-white">
+                            Votre Partenaire Fiscal et Communication
+                        </h2>
+                    </div>
+
+                    <!-- Sous-titre -->
+                    <div class="mb-10 max-w-2xl">
+                        <p class="text-lg text-white md:text-xl">
+                            Expertise en collecte de taxes, stratégies de communication et conseil fiscal pour
+                            accompagner votre croissance.
+                        </p>
+                    </div>
+
+                    <!-- Boutons CTA -->
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button
+                            class="px-8 py-3 bg-[#00bdff] text-white rounded-full font-semibold hover:bg-blue-700 transition duration-300">
+                            <i class="fas fa-file-invoice-dollar mr-2"></i>Demander un devis
+                        </button>
+                        <button
+                            class="px-8 py-3 bg-transparent border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-gray-900 transition duration-300">
+                            <i class="fas fa-play-circle mr-2"></i>Voir nos réalisations
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+
+    <!-- Section Services -->
+    <section class="py-20 w-full items-center justify-center flex">
+        <div class="w-10/12 mx-auto">
+
+            <!-- En-tête Section -->
+            <div class="text-center mb-16 text-black">
+                <span class="inline-block px-4 py-1 bg-blue-100 text-[#00bdff] rounded-full text-sm font-semibold mb-4">
+                    NOS DOMAINES D'EXPERTISE
+                </span>
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    Des Solutions <span>Complètes</span>
+                    <br>Pour Votre Réussite
+                </h2>
+                <p class="text-xl text-black max-w-3xl mx-auto">
+                    Découvrez nos 9 services spécialisés conçus pour optimiser votre gestion fiscale,
+                    booster votre communication et accélérer votre croissance.
+                </p>
+            </div>
+
+            <!-- Grid des Services -->
+            <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+
+                <!-- Service 1 : Collecte de Taxes -->
+                <div class="w-full h-auto rounded-3xl border border-black flex flex-col items-center justify-center p-5 hover:border-blue-500 transition-all duration-300"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-full h-auto text-center">
+                        <i class="fas fa-file-invoice-dollar text-3xl text-[#00bdff]"></i>
+                        <h2 class="py-3 text-xl font-bold text-black">Collecte de Taxes et Redevances</h2>
+                        <p class="py-3 text-black">
+                            Nous gérons la collecte des taxes municipales pour les collectivités locales,
+                            assurant un processus efficace et transparent.
+                        </p>
+                        <div class="py-4">
+                            <span
+                                class="w-10 h-10 inline-flex items-center justify-center text-white bg-[#00bdff] rounded-full font-bold">1</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="w-full h-auto rounded-3xl border border-black flex flex-col items-center justify-center p-5 hover:border-blue-500 transition-all duration-300"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-full h-auto text-center">
+                        <i class="fas fa-balance-scale text-3xl text-[#00bdff]"></i>
+                        <h2 class="py-3 text-xl font-bold text-black">Conseil en Fiscalité Locale</h2>
+                        <p class="py-3 text-black">
+                            Nous vous accompagnons dans l’optimisation de vos recettes fiscales et le respect des
+                            obligations fiscales locales.
+                        </p>
+                        <div class="py-4">
+                            <span
+                                class="w-10 h-10 inline-flex items-center justify-center text-white bg-[#00bdff] rounded-full font-bold">2</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full h-auto rounded-3xl border border-black flex flex-col items-center justify-center p-5 hover:border-blue-500 transition-all duration-300"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-full h-auto text-center">
+                        <i class="fas fa-calendar-alt text-3xl text-[#00bdff]"></i>
+                        <h2 class="py-3 text-xl font-bold text-black">Organisation d'Événements</h2>
+                        <p class="py-3 text-black">
+                            De l’idée à la réalisation, nous organisons vos événements (séminaires, conférences, etc.)
+                            en garantissant leur succès.
+                        </p>
+                        <div class="py-4">
+                            <span
+                                class="w-10 h-10 inline-flex items-center justify-center text-white bg-[#00bdff] rounded-full font-bold">3</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full h-auto rounded-3xl border border-black flex flex-col items-center justify-center p-5 hover:border-blue-500 transition-all duration-300"
+                    data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-full h-auto text-center">
+                        <i class="fas fa-bullhorn text-3xl text-[#00bdff]"></i>
+                        <h2 class="py-3 text-xl font-bold text-black">Stratégies de Communication</h2>
+                        <p class="py-3 text-black">
+                            Nous élaborons des stratégies de communication globales pour renforcer votre image et
+                            maximiser votre visibilité.
+                        </p>
+                        <div class="py-4">
+                            <span
+                                class="w-10 h-10 inline-flex items-center justify-center text-white bg-[#00bdff] rounded-full font-bold">4</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full h-auto rounded-3xl border border-black flex flex-col items-center justify-center p-5 hover:border-blue-500 transition-all duration-300"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-full h-auto text-center">
+                        <i class="fas fa-pen-fancy text-3xl text-[#00bdff]"></i>
+                        <h2 class="py-3 text-xl font-bold text-black">Création de Contenus</h2>
+                        <p class="py-3 text-black">
+                            De la création de sites web à la gestion des réseaux sociaux, nous produisons des contenus
+                            attractifs et pertinents.
+                        </p>
+                        <div class="py-4">
+                            <span
+                                class="w-10 h-10 inline-flex items-center justify-center text-white bg-[#00bdff] rounded-full font-bold">5</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full h-auto rounded-3xl border border-black flex flex-col items-center justify-center p-5 hover:border-blue-500 transition-all duration-300"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-full h-auto text-center">
+                        <i class="fas fa-ad text-3xl text-[#00bdff]"></i>
+                        <h2 class="py-3 text-xl font-bold text-black">Publicité et Marketing</h2>
+                        <p class="py-3 text-black">
+                            Nous gérons vos campagnes publicitaires (en ligne et hors ligne) pour accroître votre
+                            visibilité et générer des résultats.
+                        </p>
+                        <div class="py-4">
+                            <span
+                                class="w-10 h-10 inline-flex items-center justify-center text-white bg-[#00bdff] rounded-full font-bold">6</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full h-auto rounded-3xl border border-black flex flex-col items-center justify-center p-5 hover:border-blue-500 transition-all duration-300"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-full h-auto text-center">
+                        <i class="fas fa-headset text-3xl text-[#00bdff]"></i>
+                        <h2 class="py-3 text-xl font-bold text-black">Assistance Administrative</h2>
+                        <p class="py-3 text-black">
+                            Nous vous offrons une gestion administrative complète pour simplifier vos processus
+                            quotidiens et améliorer votre productivité.
+                        </p>
+                        <div class="py-4">
+                            <span
+                                class="w-10 h-10 inline-flex items-center justify-center text-white bg-[#00bdff] rounded-full font-bold">7</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full h-auto rounded-3xl border border-black flex flex-col items-center justify-center p-5 hover:border-blue-500 transition-all duration-300"
+                    data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-full h-auto text-center">
+                        <i class="fas fa-graduation-cap text-3xl text-[#00bdff]"></i>
+                        <h2 class="py-3 text-xl font-bold text-black">Formations et Coaching Professionnel</h2>
+                        <p class="py-3 text-black">
+                            Nos formations sur mesure vous permettent de renforcer les compétences de vos équipes et
+                            d’optimiser vos performances.
+                        </p>
+                        <div class="py-4">
+                            <span
+                                class="w-10 h-10 inline-flex items-center justify-center text-white bg-[#00bdff] rounded-full font-bold">8</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Témoignages -->
+    <section class="w-full py-20 px-4 sm:px-6 lg:px-8">
+        <div class="w-full md:w-10/12 mx-auto">
+
+            <!-- En-tête -->
+            <div class="text-center mb-16">
+                <span class="inline-block px-4 py-2 bg-blue-100 text-[#00bdff] rounded-full text-sm font-semibold mb-4">
+                    TÉMOIGNAGES CLIENTS
+                </span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Ce Que Disent <span class="text-[#00bdff]">Nos Clients</span>
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Découvrez les retours d'expérience de ceux qui nous font confiance
+                </p>
+            </div>
+
+            <!-- Carousel Splide -->
+            <div class="splide" id="testimonials-slider">
+                <div class="splide__track">
+                    <ul class="splide__list">
+
+                        <!-- Témoignage 1 -->
+                        <li class="splide__slide">
+                            <div class="bg-white rounded-2xl shadow-lg p-8 mx-4 border border-gray-100">
+                                <div class="flex items-start mb-6">
+                                    <div
+                                        class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mr-6">
+                                        <span class="text-blue-600 font-bold text-lg">ML</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-900 text-lg">Mairie de Lomé</h4>
+                                        <div class="flex text-yellow-400">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="text-gray-600 text-sm leading-relaxed italic">
+                                    "Grâce à Groupe Anonymat, nous avons optimisé notre collecte de taxes de 40% en 6
+                                    mois.
+                                    Leur expertise et leur professionnalisme ont dépassé nos attentes. Un partenaire de
+                                    confiance
+                                    pour toutes les collectivités locales !"
+                                </p>
+                                <div class="mt-6 pt-6 border-t border-gray-100">
+                                    <p class="text-sm text-gray-500">Mission : Optimisation fiscale et collecte</p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- Témoignage 2 -->
+                        <li class="splide__slide">
+                            <div class="bg-white rounded-2xl shadow-lg p-8 mx-4 border border-gray-100">
+                                <div class="flex items-start mb-6">
+                                    <div
+                                        class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mr-6">
+                                        <span class="text-green-600 font-bold text-lg">EC</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-900 text-lg">Entreprise Cotonnière</h4>
+                                        <div class="flex text-yellow-400">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="text-gray-600 text-sm leading-relaxed italic">
+                                    "Leur expertise en fiscalité nous a permis de réaliser des économies significatives
+                                    tout en restant parfaitement en conformité. Un conseil de qualité, un accompagnement
+                                    personnalisé et des résultats concrets dès le premier trimestre."
+                                </p>
+                                <div class="mt-6 pt-6 border-t border-gray-100">
+                                    <p class="text-sm text-gray-500">Mission : Conseil fiscal et optimisation</p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- Témoignage 3 -->
+                        <li class="splide__slide">
+                            <div class="bg-white rounded-2xl shadow-lg p-8 mx-4 border border-gray-100">
+                                <div class="flex items-start mb-6">
+                                    <div
+                                        class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0 mr-6">
+                                        <span class="text-purple-600 font-bold text-lg">BT</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-900 text-lg">Banque Togolaise</h4>
+                                        <div class="flex text-yellow-400">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="text-gray-600 text-sm leading-relaxed italic">
+                                    "La campagne de communication stratégique développée par Groupe Anonymat a
+                                    transformé
+                                    notre image de marque. Augmentation de 60% de notre visibilité et renforcement
+                                    notable
+                                    de la confiance de nos clients. Excellent travail d'équipe !"
+                                </p>
+                                <div class="mt-6 pt-6 border-t border-gray-100">
+                                    <p class="text-sm text-gray-500">Mission : Stratégie de communication corporate</p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- Témoignage 4 -->
+                        <li class="splide__slide">
+                            <div class="bg-white rounded-2xl shadow-lg p-8 mx-4 border border-gray-100">
+                                <div class="flex items-start mb-6">
+                                    <div
+                                        class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 mr-6">
+                                        <span class="text-orange-600 font-bold text-lg">GI</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-900 text-lg">Groupe Industriel</h4>
+                                        <div class="flex text-yellow-400">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="text-gray-600 text-sm leading-relaxed italic">
+                                    "Les formations sur mesure dispensées à nos équipes ont considérablement développé
+                                    leurs compétences en gestion fiscale. Pédagogie excellente, contenu adapté et
+                                    suivi post-formation très apprécié. Nous renouvelons l'expérience chaque année."
+                                </p>
+                                <div class="mt-6 pt-6 border-t border-gray-100">
+                                    <p class="text-sm text-gray-500">Mission : Programme de formation continue</p>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Navigation personnalisée -->
+            <div class="flex justify-center items-center mt-10 space-x-4">
+                <button
+                    class="splide-prev bg-white border border-gray-300 rounded-full w-12 h-12 flex items-center justify-center hover:bg-gray-50 transition duration-300">
+                    <i class="fas fa-chevron-left text-gray-600"></i>
+                </button>
+
+                <div class="splide-pagination flex space-x-2"></div>
+
+                <button
+                    class="splide-next bg-white border border-gray-300 rounded-full w-12 h-12 flex items-center justify-center hover:bg-gray-50 transition duration-300">
+                    <i class="fas fa-chevron-right text-gray-600"></i>
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="w-full py-14 px-4 sm:px-6 lg:px-8 bg-[#0d121e] bg-cover bg-center bg-fixed relative" style="background-image: url('assets/pictures/counter-one-bg.webp');">
+        <!-- Overlay sombre -->
+        <div class="w-10/12 mx-auto relative z-10">
+            <!-- En-tête Section -->
+            <div class="text-center mb-16">
+                <span class="inline-block px-4 py-2 bg-white text-[#00bdff] rounded-full text-sm font-semibold mb-4">
+                    EN UN COUP D'ŒIL
+                </span>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+                    Groupe Anonymat <span class="text-blue-400">en Chiffres</span>
+                </h2>
+                <p class="text-lg text-gray-300 max-w-2xl mx-auto">
+                    Découvrez les chiffres clés qui témoignent de notre expertise
+                    et de notre engagement envers nos clients
+                </p>
+            </div>
+
+            <!-- Grid des Chiffres - Version Simple -->
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+
+                <!-- Chiffre 1 -->
+                <div class="text-center text-white">
+                    <div class="text-4xl md:text-5xl lg:text-6xl font-bold text-blue-400 mb-2 counter"
+                        data-target="200">0</div>
+                    <div class="text-lg font-semibold">Clients Satisfaits</div>
+                </div>
+
+                <!-- Chiffre 2 -->
+                <div class="text-center text-white">
+                    <div class="text-4xl md:text-5xl lg:text-6xl font-bold text-green-400 mb-2 counter"
+                        data-target="15">0</div>
+                    <div class="text-lg font-semibold">Ans d'Expérience</div>
+                </div>
+
+                <!-- Chiffre 3 -->
+                <div class="text-center text-white">
+                    <div class="text-4xl md:text-5xl lg:text-6xl font-bold text-purple-400 mb-2 counter"
+                        data-target="98">0</div>
+                    <div class="text-lg font-semibold">% de Réussite</div>
+                </div>
+
+                <!-- Chiffre 4 -->
+                <div class="text-center text-white">
+                    <div class="text-4xl md:text-5xl lg:text-6xl font-bold text-orange-400 mb-2 counter"
+                        data-target="9">0</div>
+                    <div class="text-lg font-semibold">Services</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="w-full py-20 flex items-center justify-center">
+        <div class="w-10/12 mx-auto">
+
+            <!-- En-tête Section -->
+            <div class="text-center mb-16">
+                <span class="inline-block px-4 py-2 bg-blue-100 text-[#00bdff] rounded-full text-sm font-semibold mb-4">
+                    NOTRE VALEUR AJOUTÉE
+                </span>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Pourquoi Choisir <span class="text-[#00bdff]">Groupe Anonymat</span> ?
+                </h2>
+                <p class="text-xl text-black max-w-3xl mx-auto">
+                    Découvrez les raisons qui font de nous le partenaire privilégié
+                    de plus de 200 clients satisfaits
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
+
+                <!-- Point 1 -->
+                <div class="flex items-start space-x-6 group">
+                    <div class="flex-shrink-0">
+                        <div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center group-hover:bg-blue-600 transition-all duration-300"
+                            data-aos="fade-right" data-aos-delay="100">
+                            <i class="fas fa-chart-line text-2xl text-blue-600 group-hover:text-white"></i>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="100">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Expertise Multi-Domaines</h3>
+                        <p class="text-black leading-relaxed">
+                            Bénéficiez de l'expertise combinée de nos spécialistes en fiscalité,
+                            communication et gestion pour une approche 360° de vos besoins.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Point 2 -->
+                <div class="flex items-start space-x-6 group">
+                    <div class="flex-shrink-0">
+                        <div class="w-14 h-14 bg-green-100 rounded-2xl flex items-center justify-center group-hover:bg-green-600 transition-all duration-300"
+                            data-aos="fade-right" data-aos-delay="100">
+                            <i class="fas fa-users text-2xl text-green-600 group-hover:text-white"></i>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="100">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Accompagnement Personnalisé</h3>
+                        <p class="text-black leading-relaxed">
+                            Chaque client est unique. Nous créons des solutions sur mesure
+                            adaptées à vos objectifs spécifiques et à votre secteur d'activité.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Point 3 -->
+                <div class="flex items-start space-x-6 group">
+                    <div class="flex-shrink-0">
+                        <div data-aos="fade-right" data-aos-delay="100"
+                            class="w-14 h-14 bg-purple-100 rounded-2xl flex items-center justify-center group-hover:bg-purple-600 transition-all duration-300">
+                            <i class="fas fa-rocket text-2xl text-purple-600 group-hover:text-white"></i>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="100">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Résultats Mesurables</h3>
+                        <p class="text-black leading-relaxed">
+                            Nous nous engageons sur des résultats concrets avec des indicateurs
+                            de performance transparents et un suivi rigoureux.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Point 4 -->
+                <div class="flex items-start space-x-6 group">
+                    <div class="flex-shrink-0">
+                        <div data-aos="fade-right" data-aos-delay="100"
+                            class="w-14 h-14 bg-orange-100 rounded-2xl flex items-center justify-center group-hover:bg-orange-600 transition-all duration-300">
+                            <i class="fas fa-shield-alt text-2xl text-orange-600 group-hover:text-white"></i>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="100">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Confiance et Sérieux</h3>
+                        <p class="text-black leading-relaxed">
+                            Forts de 15 ans d'expérience, nous bâtissons des relations durables
+                            basées sur la confiance, la transparence et l'excellence.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-6 group">
+                    <div class="flex-shrink-0">
+                        <div data-aos="fade-right" data-aos-delay="100"
+                            class="w-14 h-14 bg-green-100 rounded-2xl flex items-center justify-center group-hover:bg-green-600 transition-all duration-300">
+                            <i class="fas fa-handshake text-2xl text-green-600 group-hover:text-white"></i>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="100">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Satisfaction Garantie</h3>
+                        <p class="text-black leading-relaxed">
+                            Nous nous engageons sur la qualité de nos services avec une garantie
+                            de satisfaction à 100%.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-6 group">
+                    <div class="flex-shrink-0">
+                        <div data-aos="fade-right" data-aos-delay="100"
+                            class="w-14 h-14 bg-purple-100 rounded-2xl flex items-center justify-center group-hover:bg-purple-600 transition-all duration-300">
+                            <i class="fas fa-lock text-2xl text-purple-600 group-hover:text-white"></i>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="100">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Confidentialité Totale</h3>
+                        <p class="text-black leading-relaxed">
+                            Vos données sont protégées et confidentielles. Nous respectons
+                            strictement le secret professionnel.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="w-full h-auto flex items-center justify-center relative flex-col py-20 bg-[#0d121e] bg-cover bg-center bg-fixed" style="background-image: url('assets/pictures/counter-one-bg.webp');">
+        <div class="w-11/12 lg:w-10/12 h-auto flex items-center justify-center flex-col text-center">
+            <span class="inline-block px-4 py-2 bg-white text-[#00bdff] rounded-full text-sm font-semibold mb-4">
+                Nous répondons à vos interrogations
+            </span>
+            <p class="text-white md:text-5xl text-3xl mt-5 text-center font-bold">Questions Fréquemment Posées</p>
+            <p class="mt-10 text-lg text-gray-300 max-w-4xl">
+                Si vous découvrez nos services, explorez notre FAQ pour des réponses rapides.
+                Si vous ne trouvez pas ce que vous cherchez, notre équipe est à votre disposition
+                pour un accompagnement personnalisé.
+            </p>
+        </div>
+
+        <div class="w-11/12 lg:w-8/12 h-auto gap-6 flex justify-center items-center mt-16">
+            <div class="w-full h-auto space-y-6">
+
+                <!-- Question 1 -->
+                <div data-aos="fade-up" data-aos-delay="100"
+                    class="faq-item w-full cursor-pointer border border-[#00d4ff]/20 rounded-xl bg-white/5">
+                    <div class="faq-header p-3 w-full flex justify-between items-center font-medium rounded-t-xl">
+                        <h4 class="text-lg text-white font-semibold">Quels sont vos délais d'intervention pour une
+                            mission de conseil fiscal ?</h4>
+                        <span class="faq-toggle-icon">
+                            <i class="fas fa-plus text-[#00d4ff]"></i>
+                        </span>
+                    </div>
+                    <div class="faq-content h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <p class="text-gray-300 p-6 pt-0">
+                            Pour un diagnostic initial, nous intervenons sous 48 heures. Une mission complète de conseil
+                            fiscal dure généralement entre 2 et 4 semaines, selon la complexité de votre situation. Nous
+                            nous engageons à respecter les délais convenus dans notre proposition commerciale.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div data-aos="fade-up" data-aos-delay="200"
+                    class="faq-item w-full cursor-pointer border border-[#00d4ff]/20 rounded-xl bg-white/5">
+                    <div class="faq-header p-3 w-full flex justify-between items-center font-medium rounded-t-xl">
+                        <h4 class="text-lg text-white font-semibold">Proposez-vous un accompagnement pour les
+                            collectivités territoriales ?</h4>
+                        <span class="faq-toggle-icon">
+                            <i class="fas fa-plus text-[#00d4ff]"></i>
+                        </span>
+                    </div>
+                    <div class="faq-content h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <p class="text-gray-300 p-6 pt-0">
+                            Absolument ! Nous accompagnons les communes, communautés de communes et autres collectivités
+                            dans l'optimisation de leur collecte de taxes et redevances. Nos solutions incluent
+                            l'analyse des dispositifs existants, la mise en place de systèmes de recouvrement et la
+                            formation des équipes.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div data-aos="fade-up" data-aos-delay="300"
+                    class="faq-item w-full cursor-pointer border border-[#00d4ff]/20 rounded-xl bg-white/5">
+                    <div class="faq-header p-3 w-full flex justify-between items-center font-medium rounded-t-xl">
+                        <h4 class="text-lg text-white font-semibold">Comment se déroule votre processus de collaboration
+                            ?</h4>
+                        <span class="faq-toggle-icon">
+                            <i class="fas fa-plus text-[#00d4ff]"></i>
+                        </span>
+                    </div>
+                    <div class="faq-content h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <p class="text-gray-300 p-6 pt-0">
+                            Notre processus en 4 étapes : 1) Diagnostic gratuit de votre situation, 2) Proposition sur
+                            mesure avec devis détaillé, 3) Mise en œuvre avec un chef de projet dédié, 4) Suivi et
+                            reporting régulier. Nous travaillons en étroite collaboration avec vos équipes pour assurer
+                            un transfert de compétences.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div data-aos="fade-up" data-aos-delay="400"
+                    class="faq-item w-full cursor-pointer border border-[#00d4ff]/20 rounded-xl bg-white/5">
+                    <div class="faq-header p-3 w-full flex justify-between items-center font-medium rounded-t-xl">
+                        <h4 class="text-lg text-white font-semibold">Quels types d'entreprises accompagnez-vous ?</h4>
+                        <span class="faq-toggle-icon">
+                            <i class="fas fa-plus text-[#00d4ff]"></i>
+                        </span>
+                    </div>
+                    <div class="faq-content h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <p class="text-gray-300 p-6 pt-0">
+                            Nous accompagnons tous types d'entreprises : PME, grandes entreprises, startups,
+                            collectivités territoriales et associations. Nos domaines d'expertise couvrent la fiscalité,
+                            la communication, l'organisation d'événements et la formation. Chaque accompagnement est
+                            personnalisé selon vos besoins spécifiques.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Question 5 -->
+                <div data-aos="fade-up" data-aos-delay="500"
+                    class="faq-item w-full cursor-pointer border border-[#00d4ff]/20 rounded-xl bg-white/5">
+                    <div class="faq-header p-3 w-full flex justify-between items-center font-medium rounded-t-xl">
+                        <h4 class="text-lg text-white font-semibold">Proposez-vous des formations pour nos équipes
+                            internes ?</h4>
+                        <span class="faq-toggle-icon">
+                            <i class="fas fa-plus text-[#00d4ff]"></i>
+                        </span>
+                    </div>
+                    <div class="faq-content h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <p class="text-gray-300 p-6 pt-0">
+                            Oui, nous proposons des programmes de formation sur mesure dans tous nos domaines
+                            d'expertise : fiscalité locale, stratégies de communication, gestion de projets
+                            événementiels, etc. Les formations peuvent être organisées en présentiel ou en distanciel,
+                            avec un suivi post-formation inclus.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Question 6 -->
+                <div data-aos="fade-up" data-aos-delay="600"
+                    class="faq-item w-full cursor-pointer border border-[#00d4ff]/20 rounded-xl bg-white/5">
+                    <div class="faq-header p-3 w-full flex justify-between items-center font-medium rounded-t-xl">
+                        <h4 class="text-lg text-white font-semibold">Comment puis-je demander un devis ?</h4>
+                        <span class="faq-toggle-icon">
+                            <i class="fas fa-plus text-[#00d4ff]"></i>
+                        </span>
+                    </div>
+                    <div class="faq-content h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <p class="text-gray-300 p-6 pt-0">
+                            Vous pouvez demander un devis gratuit de plusieurs manières : via notre formulaire en ligne,
+                            par téléphone au [numéro], ou en nous envoyant un email à [email]. Un conseiller vous
+                            recontactera sous 24 heures pour discuter de votre projet et établir une proposition
+                            personnalisée.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+  <footer class="w-full bg-gray-900 text-white py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Contenu principal -->
+        <div class="flex flex-col lg:flex-row justify-between items-center mb-8">
+            
+            <!-- Logo -->
+            <div class="text-center lg:text-left mb-6 lg:mb-0">
+                <img src="./assets/logo/gan-removebg-preview-4.webp" alt="Groupe Anonymat" class="h-10 mx-auto lg:mx-0 mb-3">
+                <p class="text-gray-400 text-sm">
+                    Expert en fiscalité & communication
+                </p>
+            </div>
+
+            <!-- Réseaux sociaux centrés -->
+            <div class="text-center mb-6 lg:mb-0">
+                <div class="flex justify-center space-x-3">
+                    <a href="#" class="group flex flex-col items-center">
+                        <div class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center group-hover:bg-[#00d4ff] transition duration-300 mb-1">
+                            <i class="fab fa-facebook-f text-white text-lg"></i>
+                        </div>
+                        <span class="text-gray-400 text-xs group-hover:text-[#00d4ff] transition duration-300">Facebook</span>
+                    </a>
+                    <a href="#" class="group flex flex-col items-center">
+                        <div class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center group-hover:bg-[#00d4ff] transition duration-300 mb-1">
+                            <i class="fab fa-linkedin-in text-white text-lg"></i>
+                        </div>
+                        <span class="text-gray-400 text-xs group-hover:text-[#00d4ff] transition duration-300">LinkedIn</span>
+                    </a>
+                    <a href="#" class="group flex flex-col items-center">
+                        <div class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center group-hover:bg-[#00d4ff] transition duration-300 mb-1">
+                            <i class="fab fa-twitter text-white text-lg"></i>
+                        </div>
+                        <span class="text-gray-400 text-xs group-hover:text-[#00d4ff] transition duration-300">Twitter</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Contact -->
+            <div class="text-center lg:text-right">
+                <p class="text-[#00d4ff] font-semibold mb-2">Contactez-nous</p>
+                <a href="contact.html" class="bg-[#00d4ff] text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-500 transition duration-300 inline-block">
+                    Demander un devis
+                </a>
+            </div>
+
+        </div>
+
+        <!-- Bas de footer -->
+        <div class="border-t border-gray-700 pt-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                    &copy; 2024 Groupe Anonymat. Tous droits réservés.
+                </p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-[#00d4ff] transition duration-300 text-sm">Mentions Légales</a>
+                    <a href="#" class="text-gray-400 hover:text-[#00d4ff] transition duration-300 text-sm">Confidentialité</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+  </footer>
+
+    <!-- Bouton WhatsApp -->
+    <a href="https://wa.me/VOTRE_NUMERO" target="_blank"
+        class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-blue-600 hover:bg-green-600 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 animate-bounce"
+        aria-label="Contactez-nous sur WhatsApp">
+        <!-- Icône WhatsApp -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="white">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, // Durée des animations (correspond à vos data-aos-duration)
+            once: true, // Les animations ne se jouent qu'une fois
+        });
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileCloseButton = document.getElementById('mobile-close-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+        const mobileServicesButton = document.getElementById('mobile-services-button');
+        const mobileServicesMenu = document.getElementById('mobile-services-menu');
+        const mobileServicesArrow = document.getElementById('mobile-services-arrow');
+
+        // Ouvrir le menu mobile
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+            setTimeout(() => {
+                mobileMenu.classList.add('mobile-menu-enter-active');
+            }, 10);
+        });
+
+        // Fermer le menu mobile
+        function closeMobileMenu() {
+            mobileMenu.classList.remove('mobile-menu-enter-active');
+            setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+            }, 300);
+        }
+
+        mobileCloseButton.addEventListener('click', closeMobileMenu);
+        mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+
+        // Accordéon des services mobile
+        mobileServicesButton.addEventListener('click', () => {
+            mobileServicesMenu.classList.toggle('hidden');
+            mobileServicesArrow.classList.toggle('fa-chevron-down');
+            mobileServicesArrow.classList.toggle('fa-chevron-up');
+        });
+
+        // Fermer le menu en cliquant sur un lien
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                closeMobileMenu();
+            });
+        });
+
+        function animateCounter(element, target, duration = 2000) {
+            let start = 0;
+            const increment = target / (duration / 16); // 60fps
+            const timer = setInterval(() => {
+                start += increment;
+                if (start >= target) {
+                    element.textContent = target;
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(start);
+                }
+            }, 16);
+        }
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const counters = document.querySelectorAll('.counter');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        counters.forEach(counter => {
+                            const target = parseInt(counter.getAttribute('data-target'));
+                            let count = 0;
+                            const timer = setInterval(() => {
+                                count += Math.ceil(target / 50);
+                                if (count >= target) {
+                                    counter.textContent = target;
+                                    clearInterval(timer);
+                                } else {
+                                    counter.textContent = count;
+                                }
+                            }, 40);
+                        });
+                        observer.disconnect();
+                    }
+                });
+            });
+
+            observer.observe(document.querySelector('section'));
+        });
+
+        const faqItems = document.querySelectorAll(".faq-item");
+
+        faqItems.forEach((item) => {
+            const header = item.querySelector(".faq-header");
+            const content = item.querySelector(".faq-content");
+            const icon = item.querySelector(".faq-toggle-icon i");
+
+            // Ajouter un événement au clic sur le header
+            header.addEventListener("click", () => {
+                // Si l'élément est ouvert, on le referme
+                if (content.style.height && content.style.height !== "0px") {
+                    content.style.height = "0px";
+                    icon.classList.remove("fa-minus");
+                    icon.classList.add("fa-plus");
+                    header.style.backgroundColor = '#171829';
+                } else {
+                    // Ouvrir la FAQ sélectionnée
+                    content.style.height = `${content.scrollHeight}px`; // Ajuste la hauteur à celle du contenu
+                    header.style.backgroundColor = '#34D399';
+                    icon.classList.remove("fa-plus");
+                    icon.classList.add("fa-minus");
+                }
+            });
+        });
+
+        //splide
+        document.addEventListener('DOMContentLoaded', function () {
+            // Initialisation du carousel Splide
+            const splide = new Splide('#testimonials-slider', {
+                type: 'slide',
+                perPage: 2,
+                perMove: 1,
+                gap: '2rem',
+                pagination: false,
+                arrows: false,
+                breakpoints: {
+                    1024: {
+                        perPage: 1,
+                    },
+                    768: {
+                        perPage: 1,
+                    },
+                },
+                autoplay: true,
+                interval: 5000,
+                pauseOnHover: true,
+                pauseOnFocus: true,
+            });
+
+            // Navigation personnalisée
+            const prevButton = document.querySelector('.splide-prev');
+            const nextButton = document.querySelector('.splide-next');
+
+            prevButton.addEventListener('click', () => splide.go('<'));
+            nextButton.addEventListener('click', () => splide.go('>'));
+
+            // Pagination personnalisée
+            splide.on('pagination:mounted', function (data) {
+                const paginationContainer = document.querySelector('.splide-pagination');
+                data.list.classList.add('splide__pagination--custom');
+                paginationContainer.appendChild(data.list);
+            });
+
+            splide.mount();
+        });
+    </script>
+
+</body>
+
+</html>
